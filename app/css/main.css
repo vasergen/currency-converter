@@ -9,3 +9,7 @@
     display: inline-block;
     cursor: pointer;
 }
+
+.col-amount {
+    padding-right: 0;
+}

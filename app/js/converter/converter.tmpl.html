@@ -18,25 +18,34 @@
                 </span>
             </div>
 
-            <div class="form-group form-inline">
-                <input
-                        ng-model="$ctrl.amount"
-                        class="input-amount form-control"
-                        type="number"
-                        min="0"
-                        />
-                <select
-                        class="selected-currency form-control"
-                        ng-model="$ctrl.selectedCurrency"
-                >
-                    <option
-                            value={{currency}}
-                            ng-repeat="(currency, rate) in $ctrl.rates"
-                            ng-if="$ctrl.isActiveCurrency(currency)"
-                            >
-                        {{currency}}
-                    </option>
-                </select>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-9 col-amount">
+                        <input
+                                ng-model="$ctrl.amount"
+                                class="form-control"
+                                type="number"
+                                min="0"
+                                />
+                    </div>
+
+                    <div class="col-xs-3">
+                        <select
+                                class="form-control"
+                                ng-model="$ctrl.selectedCurrency"
+                                >
+                            <option
+                                    value={{currency}}
+                                    ng-repeat="(currency, rate) in $ctrl.rates"
+                                    ng-if="$ctrl.isActiveCurrency(currency)"
+                                    >
+                                {{currency}}
+                            </option>
+                        </select>
+                    </div>
+
+
+                </div>
             </div>
 
             <ul class="list-group">
