@@ -21,14 +21,14 @@
             <div class="form-group form-inline">
                 <input
                         ng-model="$ctrl.amount"
-                        class="form-control"
+                        class="input-amount form-control"
                         type="number"
                         min="0"
                         />
                 <select
-                        class="form-control"
+                        class="selected-currency form-control"
                         ng-model="$ctrl.selectedCurrency"
-                        >
+                >
                     <option
                             value={{currency}}
                             ng-repeat="(currency, rate) in $ctrl.rates"

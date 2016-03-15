@@ -1,5 +1,7 @@
 .converter-wrapper {
-    margin-top: 20px;
+    margin: 0 auto;
+    max-width: 500px;
+    min-width: 500px;
 }
 
 .currency-label {
