@@ -1,0 +1,9 @@
+.converter-wrapper {
+    margin-top: 20px;
+}
+
+.currency-label {
+    margin: 3px 3px 3px 0;
+    display: inline-block;
+    cursor: pointer;
+}
