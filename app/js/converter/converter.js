@@ -11,6 +11,8 @@ angular.module('app', [])
             this.activeCurrencies = ["USD", "PLN", "EUR", "RUB"]
 
             this.convert = function(from, to, amount) {
+                if(!from || !to)
+                    return 0
                 return this.rates[to] / this.rates[from] * amount
             }
 
@@ -25,6 +27,8 @@ angular.module('app', [])
 
                 let index = this.activeCurrencies.indexOf(currency)
                 this.activeCurrencies.splice(index, 1)
+                if(currency == this.selectedCurrency)
+                    this.selectedCurrency = null
             }
 
             GetRates.get()

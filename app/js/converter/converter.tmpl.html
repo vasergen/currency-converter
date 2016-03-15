@@ -20,9 +20,10 @@
 
             <div class="form-group form-inline">
                 <input
+                        ng-model="$ctrl.amount"
                         class="form-control"
                         type="number"
-                        ng-model="$ctrl.amount"
+                        min="0"
                         />
                 <select
                         class="form-control"
@@ -38,15 +39,13 @@
                 </select>
             </div>
 
-
-
             <ul class="list-group">
                 <li
-                        class="list-group-item"
-                        ng-repeat="(currency, rate) in $ctrl.rates"
-                        ng-hide="currency == $ctrl.selectedCurrency"
-                        ng-if="$ctrl.isActiveCurrency(currency)"
-                        >
+                    class="list-group-item"
+                    ng-repeat="(currency, rate) in $ctrl.rates"
+                    ng-hide="currency == $ctrl.selectedCurrency"
+                    ng-if="$ctrl.isActiveCurrency(currency)"
+                >
                     {{currency}}: {{$ctrl.convert($ctrl.selectedCurrency, currency, $ctrl.amount) | currencyRound}}
                 </li>
             </ul>
